@@ -1,11 +1,18 @@
 import { Avatar, Box, Container, Flex, Grid, GridItem, Heading } from "@chakra-ui/react";
 import React from "react";
-
-
-
+import { useQuery } from "react-query";
+import useChatData from "../../apis/"
 
 
 export default function ChatList() {
+
+
+    const query = useQuery('chatData', () => fetch("https://638b643281df38ab3467feab.mockapi.io/account1").then(r => r.json()))
+    console.log(query);
+
+
+
+
     return (
         <Container>
             <Box p={4}>
