@@ -21,6 +21,8 @@ import {
   QueryClient,
   QueryClientProvider,
 } from 'react-query'
+import Chat from "./routes/Chat/Chat";
+import { SearchBar } from "./utils/search";
 
 const queryClient = new QueryClient()
 
@@ -44,15 +46,16 @@ const router = createBrowserRouter([
       },
       {
         path: "/chat",
-        element: <ChatList />,
+        element: <Chat />,
+
       },
       {
-        path: "/im",
-        element: <> </>,
+        path: "/chatbox",
+        element: <ChatBox />,
       },
       {
-        path: "/chat/chatindex",
-        element: <> </>,
+        path: "/searchbar",
+        element: < ChatBox/>,
       },
       {
         path: "/chatRoom",
@@ -68,16 +71,16 @@ const router = createBrowserRouter([
 ReactDOM.render(
   <QueryClientProvider client={queryClient}>
 
-  <ChakraProvider>
-    <RouterProvider router={router} />
-    {/* <HeaderChatBox />
+    <ChakraProvider>
+      <RouterProvider router={router} />
+      {/* <HeaderChatBox />
     <ChatBox />
     <ChatList />
     <FooterNavBar /> */}
-  </ChakraProvider>,
+    </ChakraProvider>,
   </QueryClientProvider>
 
-  ,document.getElementById("root")
+  , document.getElementById("root")
 );
 
 

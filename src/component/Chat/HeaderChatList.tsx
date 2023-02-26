@@ -1,14 +1,18 @@
-import { Flex, Avatar, Text, Box, Badge } from '@chakra-ui/react'
-import React from 'react'
+import { Avatar, Badge, Box, Flex, Text } from "@chakra-ui/react";
+import React from "react";
 
 
-interface ChatHeaderBoxProps {
+
+interface ChatHeaderListProps {
     avatar: string;
     name: string;
     status: string;
-}
-// 聊天室頂部導航欄位
-export default function HeaderChatBox() {
+};
+
+
+// 聊天列表的頂部導航欄位
+export default function HeaderChatList() {
+
     return (
         <Flex
             px={4}
