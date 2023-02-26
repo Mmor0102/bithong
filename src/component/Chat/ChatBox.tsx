@@ -19,7 +19,7 @@ export default function ChatBox() {
         // handle sending message logic
         setMessage("")
     };
-0c
+
     return (
 
         <Box
